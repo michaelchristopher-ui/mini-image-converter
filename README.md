@@ -131,7 +131,13 @@ Once the dependencies have been installed, run this command on the terminal:
 
 - make all
 
-  
+
+This will do three things as written in the Makefile:
+
+- Setup, which basically calls go mod vendor.
+- Build, which builds the application.
+- Run, which runs the application with the specified config.
+
 
 The app will be run locally on the port specified in the cmd/app/config.yaml file. The default port is 8008.
 
@@ -147,11 +153,11 @@ There are two options to run the unit test. Simply use one of these commands on 
 
 - make test
 
-- Runs the test without coverage
+    - Runs the test without coverage
 
 - make cover=true test
 
-- Runs the test with coverage
+    - Runs the test with coverage
 
   
 
