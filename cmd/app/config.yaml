@@ -1,0 +1,4 @@
+server:
+  read_timeout: 0
+  write_timeout: 0
+  port: "8008"

@@ -1,0 +1,110 @@
+{
+	"info": {
+		"_postman_id": "ccb9ed37-ddab-4b54-8b12-363de09b8c5f",
+		"name": "mini-image-converter-apis",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26579092"
+	},
+	"item": [
+		{
+			"name": "convert",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "postman-cloud:///1eede204-9e8d-4720-b09c-19ccdd025232"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:8008/convert",
+					"host": [
+						"localhost"
+					],
+					"port": "8008",
+					"path": [
+						"convert"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "resize",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "postman-cloud:///1eede204-9e8d-4720-b09c-19ccdd025232"
+						},
+						{
+							"key": "height",
+							"value": "200",
+							"type": "text"
+						},
+						{
+							"key": "width",
+							"value": "300",
+							"type": "text"
+						},
+						{
+							"key": "interpolation_flag",
+							"value": "0",
+							"description": "Supports only 0,1,2,3,4 and 7. For more info: https://vovkos.github.io/doxyrest-showcase/opencv/sphinx_rtd_theme/enum_cv_InterpolationFlags.html\n",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:8008/resize",
+					"host": [
+						"localhost"
+					],
+					"port": "8008",
+					"path": [
+						"resize"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "compress",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "postman-cloud:///1eede204-9e8d-4720-b09c-19ccdd025232"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:8008/compress",
+					"host": [
+						"localhost"
+					],
+					"port": "8008",
+					"path": [
+						"compress"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
